@@ -2,6 +2,8 @@
   "https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B"
 #include <algorithm>
 #include <iostream>
+#include <set>
+#include <unordered_set>
 #include <vector>
 #define REP(i, n) for (int i = 0; (i) < (int)(n); ++(i))
 #define ALL(x) std::begin(x), std::end(x)
@@ -12,16 +14,18 @@ int main() {
   std::cin.tie(nullptr);
   int n;
   cin >> n;
-  vector<int> s(n);
-  REP(i, n) { cin >> s[i]; }
-  sort(ALL(s));
+  unordered_set<int> s;
+  REP(i, n) {
+    int a;
+    cin >> a;
+    s.insert(a);
+  }
   int q;
   cin >> q;
   int cnt = 0;
-  // cerr << " gg" << endl;
   vector<int> t(q);
   REP(i, q) cin >> t[i];
-  REP(i, q) { cnt += binary_search(ALL(s), t[i]); }
+  REP(i, q) { cnt += s.count(t[i]); }
   cout << cnt << endl;
   return 0;
 }
