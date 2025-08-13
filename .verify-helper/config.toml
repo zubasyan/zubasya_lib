@@ -1,11 +1,4 @@
 # .verify-helper/config.toml
-
-# 環境1: デバッグ用 (安全性を重視、低速)
 [[languages.cpp.environments]]
 CXX = "g++"
 CXXFLAGS = ["-std=c++20", "-Wall", "-g", "-fsanitize=undefined", "-D_GLIBCXX_DEBUG"]
-
-# 環境2: リリース用 (速度を重視、高速)
-[[languages.cpp.environments]]
-CXX = "g++"
-CXXFLAGS = ["-std=c++20", "-O2", "-Wall"]
