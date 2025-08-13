@@ -3,34 +3,26 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B
+    PROBLEM: https://judge.yosupo.jp/problem/aplusb
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B
-  bundledCode: "#line 1 \"example.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\
-    \n#include <algorithm>\n#include <iostream>\n#include <vector>\n#define REP(i,\
-    \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define ALL(x) std::begin(x), std::end(x)\n\
-    using namespace std;\n\nint main() {\n    int n; cin >> n;\n    vector<int> s(n);\n\
-    \    REP (i, n) {\n        cin >> s[i];\n    }\n    int q; cin >> q;\n    int\
-    \ cnt = 0;\n    while (q --) {\n        int t_i; cin >> t_i;\n        cnt += binary_search(ALL(s),\
-    \ t_i);\n    }\n    cout << cnt << endl;\n    return 0;\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/4/ALDS1_4_B\"\
-    \n#include <algorithm>\n#include <iostream>\n#include <vector>\n#define REP(i,\
-    \ n) for (int i = 0; (i) < (int)(n); ++ (i))\n#define ALL(x) std::begin(x), std::end(x)\n\
-    using namespace std;\n\nint main() {\n    int n; cin >> n;\n    vector<int> s(n);\n\
-    \    REP (i, n) {\n        cin >> s[i];\n    }\n    int q; cin >> q;\n    int\
-    \ cnt = 0;\n    while (q --) {\n        int t_i; cin >> t_i;\n        cnt += binary_search(ALL(s),\
-    \ t_i);\n    }\n    cout << cnt << endl;\n    return 0;\n}\n"
+    - https://judge.yosupo.jp/problem/aplusb
+  bundledCode: "#line 1 \"example.test.cpp\"\n#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\
+    \n#include <iostream>\nusing namespace std;\n\nint main() {\n  int a, b;\n  cin\
+    \ >> a >> b;\n  cout << a + b << endl;\n  return 0;\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/aplusb\"\n#include <iostream>\n\
+    using namespace std;\n\nint main() {\n  int a, b;\n  cin >> a >> b;\n  cout <<\
+    \ a + b << endl;\n  return 0;\n}\n"
   dependsOn: []
   isVerificationFile: true
   path: example.test.cpp
   requiredBy: []
-  timestamp: '2025-08-13 19:39:55+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2025-08-13 21:44:06+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: example.test.cpp
 layout: document
