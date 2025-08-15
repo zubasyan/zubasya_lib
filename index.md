@@ -1,6 +1,11 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: lib
+    pages:
+    - icon: ':warning:'
+      path: lib/binary_search_on_answer.hpp
+      title: Binary search on answer
   verificationCategories:
   - name: .
     pages:
