@@ -1,7 +1,7 @@
+#pragma once
 // ref
 // https://github.com/kth-competitive-programming/kactl/blob/main/content/geometry/Point.h
 
-#pragma once
 #include <tuple>
 
 namespace zbs {
