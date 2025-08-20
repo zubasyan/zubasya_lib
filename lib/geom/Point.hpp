@@ -5,7 +5,7 @@
 #include <tuple>
 
 namespace zbs {
-
+using namespace std;
 template <class T>
 inline int sign(T x) {
   return (x > 0) - (x < 0);
