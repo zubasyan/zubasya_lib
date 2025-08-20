@@ -9,20 +9,8 @@ data:
   attributes:
     links: []
   bundledCode: "#line 2 \"lib/binary_search_on_answer.hpp\"\n#include <cassert>\n\
-    #include <numeric>\n#include <type_traits>\n#include <vector>\n\nnamespace zbs\
-    \ {\ntemplate <typename T, typename F>\nT binary_search_on_answer(bool to_maximize,\
-    \ T X_l, T X_u, F f,\n                          int step_num = 200) {\n  assert(X_l\
-    \ <= X_u);\n  if constexpr (std::is_integral_v<T>) {\n    T ok = X_u, ng = X_l;\n\
-    \    if (to_maximize) swap(ok, ng);\n    for (; abs(ok - ng) > 1;) {\n      T\
-    \ mid = std::midpoint(ok, ng);\n      (f(mid) ? ok : ng) = mid;\n    }\n    return\
-    \ ok;\n  } else if constexpr (std::is_floating_point_v<T>) {\n    T ok = X_u,\
-    \ ng = X_l;\n    if (to_maximize) swap(ok, ng);\n    for (int step = 0; step <\
-    \ step_num; step++) {\n      T mid = std::midpoint(ok, ng);\n      (f(mid) ? ok\
-    \ : ng) = mid;\n    }\n    return ok;\n  } else {\n    assert(0 && \"X_l, X_u\u306F\
-    \u6574\u6570\u578B\u304B\u5C0F\u6570\u578B\u3067\u306A\u3044\u3068\u3044\u3051\
-    \u306A\u3044\");\n  }\n}\n\n}  // namespace zbs\n"
-  code: "#pragma once\n#include <cassert>\n#include <numeric>\n#include <type_traits>\n\
-    #include <vector>\n\nnamespace zbs {\ntemplate <typename T, typename F>\nT binary_search_on_answer(bool\
+    #include <numeric>\n#include <type_traits>\n#include <vector>\nnamespace zbs {\n\
+    using namespace std;\n\ntemplate <typename T, typename F>\nT binary_search_on_answer(bool\
     \ to_maximize, T X_l, T X_u, F f,\n                          int step_num = 200)\
     \ {\n  assert(X_l <= X_u);\n  if constexpr (std::is_integral_v<T>) {\n    T ok\
     \ = X_u, ng = X_l;\n    if (to_maximize) swap(ok, ng);\n    for (; abs(ok - ng)\
@@ -32,12 +20,25 @@ data:
     \ = 0; step < step_num; step++) {\n      T mid = std::midpoint(ok, ng);\n    \
     \  (f(mid) ? ok : ng) = mid;\n    }\n    return ok;\n  } else {\n    assert(0\
     \ && \"X_l, X_u\u306F\u6574\u6570\u578B\u304B\u5C0F\u6570\u578B\u3067\u306A\u3044\
-    \u3068\u3044\u3051\u306A\u3044\");\n  }\n}\n\n}  // namespace zbs"
+    \u3068\u3044\u3051\u306A\u3044\");\n  }\n}\n\n}  // namespace zbs\n"
+  code: "#pragma once\n#include <cassert>\n#include <numeric>\n#include <type_traits>\n\
+    #include <vector>\nnamespace zbs {\nusing namespace std;\n\ntemplate <typename\
+    \ T, typename F>\nT binary_search_on_answer(bool to_maximize, T X_l, T X_u, F\
+    \ f,\n                          int step_num = 200) {\n  assert(X_l <= X_u);\n\
+    \  if constexpr (std::is_integral_v<T>) {\n    T ok = X_u, ng = X_l;\n    if (to_maximize)\
+    \ swap(ok, ng);\n    for (; abs(ok - ng) > 1;) {\n      T mid = std::midpoint(ok,\
+    \ ng);\n      (f(mid) ? ok : ng) = mid;\n    }\n    return ok;\n  } else if constexpr\
+    \ (std::is_floating_point_v<T>) {\n    T ok = X_u, ng = X_l;\n    if (to_maximize)\
+    \ swap(ok, ng);\n    for (int step = 0; step < step_num; step++) {\n      T mid\
+    \ = std::midpoint(ok, ng);\n      (f(mid) ? ok : ng) = mid;\n    }\n    return\
+    \ ok;\n  } else {\n    assert(0 && \"X_l, X_u\u306F\u6574\u6570\u578B\u304B\u5C0F\
+    \u6570\u578B\u3067\u306A\u3044\u3068\u3044\u3051\u306A\u3044\");\n  }\n}\n\n}\
+    \  // namespace zbs"
   dependsOn: []
   isVerificationFile: false
   path: lib/binary_search_on_answer.hpp
   requiredBy: []
-  timestamp: '2025-08-15 22:27:45+09:00'
+  timestamp: '2025-08-20 17:28:53+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: lib/binary_search_on_answer.hpp
