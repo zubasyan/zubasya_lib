@@ -3,8 +3,9 @@
 #include <numeric>
 #include <type_traits>
 #include <vector>
-
 namespace zbs {
+using namespace std;
+
 template <typename T, typename F>
 T binary_search_on_answer(bool to_maximize, T X_l, T X_u, F f,
                           int step_num = 200) {
